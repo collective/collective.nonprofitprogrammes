@@ -4,7 +4,7 @@
    i18n:domain="collective.nonprofitprogrammes" xmlns:i18n="http://xml.zope.org/namespaces/i18n">
 
   <!-- Basic metadata -->
-  <property name="title" i18n:translate="">Project</property>
+  <property name="title" i18n:translate="">npProject</property>
   <property name="description"
     i18n:translate="">Profile of a Project</property>
   <property name="icon_expr">string:${portal_url}/++resource++collective.nonprofitprogrammes/project.png</property>
