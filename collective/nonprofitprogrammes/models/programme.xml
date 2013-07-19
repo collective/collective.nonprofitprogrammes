@@ -1,0 +1,22 @@
+<model xmlns:security="http://namespaces.plone.org/supermodel/security" xmlns:marshal="http://namespaces.plone.org/supermodel/marshal" xmlns:form="http://namespaces.plone.org/supermodel/form" xmlns="http://namespaces.plone.org/supermodel/schema">
+  <schema>
+    <field name="image" type="plone.namedfile.field.NamedBlobImage">
+      <description>Attach a summary image for this programme</description>
+      <title>Image</title>
+      <required>False</required>
+    </field>
+    <field name="background" type="plone.app.textfield.RichText">
+      <description/>
+      <title>Background</title>
+    </field>
+    <field name="problems" type="plone.app.textfield.RichText">
+      <description/>
+      <title>Problems</title>
+    </field>
+    <field name="ongoing_measures" type="plone.app.textfield.RichText">
+      <description/>
+      <title>Ongoing Measures</title>
+      <required>False</required>
+    </field>
+  </schema>
+</model>
