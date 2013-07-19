@@ -7,6 +7,7 @@
     <field name="image" type="plone.namedfile.field.NamedBlobImage">
       <description/>
       <title>Image</title>
+      <required>False</required>
     </field>
   </schema>
 </model>
