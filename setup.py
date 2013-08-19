@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 import os
 
-version = '1.0a'
+version = '1.0a1'
 
 setup(name='collective.nonprofitprogrammes',
       version=version,
@@ -28,6 +28,7 @@ setup(name='collective.nonprofitprogrammes',
           'setuptools',
           'plone.app.dexterity [grok, relations]',
           'plone.namedfile [blobs]',
+          'plone.api',
           # -*- Extra requirements: -*-
       ],
       entry_points="""

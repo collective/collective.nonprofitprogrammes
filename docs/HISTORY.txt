@@ -1,6 +1,11 @@
 Changelog
 =========
 
+1.0a
+------
+
+- Added plone.api as a dependency [pigeonflight]
+
 1.0adev (unreleased)
 --------------------
 

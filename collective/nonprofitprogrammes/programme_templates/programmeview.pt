@@ -48,7 +48,12 @@
     <div tal:define="show nocall:context/partners"
      tal:condition="nocall:show">
     <h2>Partners</h2>
-         <div tal:content="structure context/partners" />
+         <div tal:repeat="partner context/partners">
+           <h4 tal:content="partner/to_object/Title"></h4>
+           <a href="" tal:attributes="href partner/to_object/absolute_url"><img tal:attributes="src string:${partner/to_object/absolute_url}/@@images/image/thumb" />
+           </a>
+         </div>
+
 
     </div>
     </div>
