@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 import os
 
-version = '1.0a1'
+version = '1.0a2'
 
 setup(name='collective.nonprofitprogrammes',
       version=version,
@@ -16,9 +16,9 @@ setup(name='collective.nonprofitprogrammes',
         "Topic :: Software Development :: Libraries :: Python Modules",
         ],
       keywords='',
-      author='',
-      author_email='',
-      url='http://svn.plone.org/svn/collective/',
+      author='David Bain',
+      author_email='david@alteroo.com',
+      url='https://github.com/collective/collective.nonprofitprogrammes',
       license='GPL',
       packages=find_packages(exclude=['ez_setup']),
       namespace_packages=['collective'],
@@ -39,7 +39,5 @@ setup(name='collective.nonprofitprogrammes',
       # The next two lines may be deleted after you no longer need
       # addcontent support from paster and before you distribute
       # your package.
-      setup_requires=["PasteScript"],
-      paster_plugins = ["ZopeSkel"],
 
       )
