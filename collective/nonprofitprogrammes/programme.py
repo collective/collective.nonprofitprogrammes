@@ -15,13 +15,13 @@ from plone.namedfile.field import NamedBlobImage, NamedBlobFile
 from plone.supermodel import model
 
 from plone.app.textfield import RichText
-
 from z3c.relationfield.schema import RelationList, RelationChoice
 from plone.formwidget.contenttree import ObjPathSourceBinder
 
 
 from collective.nonprofitprogrammes import MessageFactory as _
 from collective.nonprofitprogrammes.project import IProject
+#from collective.nonprofitprogrammes.programme import IProgramme
 from collective.nonprofitprogrammes.partner import IPartner
 
 
@@ -51,6 +51,13 @@ class IProgramme(_IProgramme,model.Schema):
     Programme Profile
     """
 
+    related_programmes = RelationList(
+    title=u"Related Programmes",
+    default=[],
+    value_type=RelationChoice(title=_(u"Related Programmes"),
+                              source=ObjPathSourceBinder(object_provides=_IProgramme.__identifier__)),
+    required=False,
+)
     related_projects = RelationList(
     title=u"Related Projects",
     default=[],

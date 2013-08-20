@@ -36,6 +36,17 @@
     <img tal:attributes="src string:${context/absolute_url}/@@images/image/preview;"
         />
          </div>
+    <div tal:define="show nocall:context/related_programmes"
+     tal:condition="nocall:show">
+    <h2>Related Programmes</h2>
+         <metal:programmes tal:repeat="programme context/related_programmes" >
+              <p>
+               <a tal:attributes="href programme/to_object/absolute_url | nothing;">
+                <span tal:replace="programme/to_object/Title | nothing" />
+              </a>
+              </p>
+          </metal:programmes>
+    </div>
     <div tal:define="show nocall:context/related_projects"
      tal:condition="nocall:show">
     <h2>Related Projects</h2>
