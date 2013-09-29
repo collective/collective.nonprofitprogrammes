@@ -20,6 +20,7 @@ from plone.formwidget.contenttree import ObjPathSourceBinder
 
 
 from collective.nonprofitprogrammes import MessageFactory as _
+from interfaces import _IProgramme
 from collective.nonprofitprogrammes.project import IProject
 #from collective.nonprofitprogrammes.programme import IProgramme
 from collective.nonprofitprogrammes.partner import IPartner
@@ -27,18 +28,7 @@ from collective.nonprofitprogrammes.partner import IPartner
 
 # Interface class; used to define content-type schema.
 
-class _IProgramme(form.Schema, IImageScaleTraversable):
-    """
-    Based Programme Profile
-    """
 
-    # If you want a schema-defined interface, delete the form.model
-    # line below and delete the matching file in the models sub-directory.
-    # If you want a model-based interface, edit
-    # models/programme.xml to define the content type
-    # and add directives here as necessary.
-
-    form.model("models/programme.xml")
 
 
 # Custom content-type class; objects created for this content type will

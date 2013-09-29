@@ -15,16 +15,19 @@ from plone.namedfile.field import NamedBlobImage, NamedBlobFile
 
 from plone.app.textfield import RichText
 
+from plone.supermodel import model
+
 from z3c.relationfield.schema import RelationList, RelationChoice
 from plone.formwidget.contenttree import ObjPathSourceBinder
 
 from collective.nonprofitprogrammes import MessageFactory as _
 from collective.nonprofitprogrammes.backref import back_references
-
+from interfaces import _IProgramme
+from collective.nonprofitprogrammes.partner import IPartner
 
 # Interface class; used to define content-type schema.
 
-class IProject(form.Schema, IImageScaleTraversable):
+class _IProject(form.Schema, IImageScaleTraversable):
     """
     Profile of a Project
     """
@@ -42,6 +45,35 @@ class IProject(form.Schema, IImageScaleTraversable):
 # be instances of this class. Use this class to add content-type specific
 # methods and properties. Put methods that are mainly useful for rendering
 # in separate view classes.
+
+class IProject(_IProject,model.Schema):
+    """
+    Project Profile
+    """
+
+    related_programmes = RelationList(
+    title=u"Related Programmes",
+    default=[],
+    value_type=RelationChoice(title=_(u"Related Programmes"),
+                              source=ObjPathSourceBinder(object_provides=_IProgramme.__identifier__)),
+    required=False,
+)
+    related_projects = RelationList(
+    title=u"Related Projects",
+    default=[],
+    value_type=RelationChoice(title=_(u"Related Projects"),
+                              source=ObjPathSourceBinder(object_provides=_IProject.__identifier__)),
+    required=False,
+)
+    sponsors_and_partners = RelationList(
+    title=u"Sponsors and Partners",
+    default=[],
+    value_type=RelationChoice(title=_(u"Related Sponsors & Partners"),
+                              source=ObjPathSourceBinder(object_provides=IPartner.__identifier__)),
+    required=False,
+)
+
+
 
 class Project(dexterity.Container):
     grok.implements(IProject)

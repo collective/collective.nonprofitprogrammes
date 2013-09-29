@@ -1,4 +1,4 @@
-<model xmlns:security="http://namespaces.plone.org/supermodel/security" xmlns:marshal="http://namespaces.plone.org/supermodel/marshal" xmlns:form="http://namespaces.plone.org/supermodel/form" xmlns="http://namespaces.plone.org/supermodel/schema">
+<model xmlns:marshal="http://namespaces.plone.org/supermodel/marshal" xmlns:form="http://namespaces.plone.org/supermodel/form" xmlns:security="http://namespaces.plone.org/supermodel/security" xmlns="http://namespaces.plone.org/supermodel/schema">
   <schema>
     <field name="overview" type="plone.app.textfield.RichText">
       <description/>
@@ -6,8 +6,66 @@
     </field>
     <field name="image" type="plone.namedfile.field.NamedBlobImage">
       <description/>
-      <title>Image</title>
       <required>False</required>
+      <title>Image</title>
+    </field>
+    <field name="areas_affected" type="zope.schema.TextLine">
+      <description>Countrys, Regions, separate each with a comma (,)</description>
+      <title>Areas Affected</title>
+    </field>
+    <field name="executing_body" type="zope.schema.TextLine">
+      <description>e.g Environment Division, Ministry of Tourism and Environment, the Central Board of Health, Ministry of Health;</description>
+      <title>Executing Body</title>
+    </field>
+    <field name="cost_of_project" type="zope.schema.Float">
+      <description>State the cost of the project in USD</description>
+      <title>Cost of Project</title>
+    </field>
+   
+   
+    <field name="name_of_government_endorsing_representative" type="zope.schema.TextLine">
+      <description>Name of Government Representative endorsing the Project</description>
+      <title>Name of Government Endorsing Representative </title>
+    </field>
+    <field name="post_of_government_endorsing_representative" type="zope.schema.TextLine">
+      <description>Post of Government Representative endorsing the Project</description>
+      <title>Post of Government Endorsing Representative</title>
+    </field>
+    <field name="project_activities" type="plone.app.textfield.RichText">
+      <description/>
+      <title>Project Activities</title>
+    </field>
+    <field name="project_objectives" type="plone.app.textfield.RichText">
+      <description/>
+      <title>Project Objectives</title>
+    </field>
+    <field name="project_outputs" type="plone.app.textfield.RichText">
+      <description/>
+      <title>Project Outputs</title>
+    </field>
+    <field name="management_structure" type="zope.schema.TextLine">
+      <description/>
+      <title>Management Structure</title>
+    </field>
+    <field name="stakeholders_and_beneficiaries" type="zope.schema.TextLine">
+      <description/>
+      <title>Stakeholders and Beneficiaries</title>
+    </field>
+    <field name="long_term_sustainability_strategy" type="zope.schema.TextLine">
+      <description/>
+      <title>Long-term Sustainability Strategy</title>
+    </field>
+    <field name="replicability" type="zope.schema.TextLine">
+      <description/>
+      <title>Replicability</title>
+    </field>
+    <field name="monitoring_and_evaluation_process" type="zope.schema.Text">
+      <description/>
+      <title>Monitoring and Evaluation Process</title>
+    </field>
+    <field name="funding_sources" type="zope.schema.Text">
+      <description/>
+      <title>Funding Sources</title>
     </field>
   </schema>
 </model>
