@@ -3,6 +3,7 @@
     <field name="overview" type="plone.app.textfield.RichText">
       <description/>
       <title>Overview</title>
+      <required>False</required>
     </field>
     <field name="image" type="plone.namedfile.field.NamedBlobImage">
       <description/>
@@ -62,22 +63,22 @@
       <title>Project Outputs</title>
       <required>False</required>
     </field>
-    <field name="management_structure" type="zope.schema.TextLine">
+    <field name="management_structure" type="zope.schema.Text">
       <description/>
       <title>Management Structure</title>
       <required>False</required>
     </field>
-    <field name="stakeholders_and_beneficiaries" type="zope.schema.TextLine">
+    <field name="stakeholders_and_beneficiaries" type="zope.schema.Text">
       <description/>
       <title>Stakeholders and Beneficiaries</title>
       <required>False</required>
     </field>
-    <field name="long_term_sustainability_strategy" type="zope.schema.TextLine">
+    <field name="long_term_sustainability_strategy" type="zope.schema.Text">
       <description/>
       <title>Long-term Sustainability Strategy</title>
       <required>False</required>
     </field>
-    <field name="replicability" type="zope.schema.TextLine">
+    <field name="replicability" type="zope.schema.Text">
       <description/>
       <title>Replicability</title>
       <required>False</required>
@@ -90,6 +91,7 @@
     <field name="funding_sources" type="zope.schema.Text">
       <description/>
       <title>Funding Sources</title>
+      <required>False</required>
     </field>
   </schema>
 </model>
