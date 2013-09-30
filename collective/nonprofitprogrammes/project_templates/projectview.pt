@@ -90,7 +90,12 @@
          <div> <span tal:replace="structure context/long_term_sustainability_strategy" />
           </div>
          </div>
+      <!-- Areas Affected -->
+     <div tal:define="show nocall:context/related_programmes"
+     tal:condition="nocall:show">
+     <h2>Areas Affected</h2>
      <div tal:content="structure context/areas_affected" />
+     </div>
      <!-- related programmes -->
     <div tal:define="show nocall:context/related_programmes"
      tal:condition="nocall:show">
