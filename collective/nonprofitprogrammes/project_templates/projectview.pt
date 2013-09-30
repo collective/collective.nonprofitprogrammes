@@ -17,7 +17,11 @@
 
    <div class="row">
    <div id="leftcontent" class ="cell position-0 width-9">
+     <!-- project overview -->
+	<div tal:define="show nocall:context/overview"
+		     tal:condition="nocall:show">
         <div tal:content="structure context/overview/output" />
+        </div>
      <!-- project activities -->
 	<div tal:define="show nocall:context/project_activities"
 		     tal:condition="nocall:show">
@@ -87,6 +91,7 @@
           </div>
          </div>
      <div tal:content="structure context/areas_affected" />
+     <!-- related programmes -->
     <div tal:define="show nocall:context/related_programmes"
      tal:condition="nocall:show">
     <h2>Related Programmes</h2>
@@ -98,6 +103,7 @@
               </p>
           </metal:programmes>
     </div>
+     <!-- related projects -->
     <div tal:define="show nocall:context/related_projects"
      tal:condition="nocall:show">
     <h2>Related Projects</h2>
