@@ -45,6 +45,12 @@
     <img tal:attributes="src string:${context/absolute_url}/@@images/image/preview;"
         />
          </div>
+       <!-- funding sources -->
+		<div tal:define="show nocall:context/funding_sources"
+		     tal:condition="nocall:show">
+		<h2>Funding Source(s)</h2>
+		 <div tal:content="structure context/funding_sources" />
+        </div>
        <!-- executing body -->
 		<div tal:define="show nocall:context/executing_body"
 		     tal:condition="nocall:show">
@@ -70,7 +76,7 @@
         <div tal:define="show nocall:context/replicability"
      tal:condition="nocall:show">
         <h2>Replicability</h2>
-         <div> <span tal:replace="structure context/replicability">
+         <div> <span tal:replace="structure context/replicability"/>
           </div>
          </div>
      <!-- Long term sustainability -->
